@@ -1,0 +1,149 @@
+@import 'init';
+
+.pc {
+  @include media($pad) {
+    display: none;
+  }
+}
+.mb {
+  display: none;
+  @include media($pad) {
+    display: block;
+  }
+}
+
+.main {
+  min-height: 100%;
+  background-color: rgb(240, 240, 240);
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  * {
+    // border: 1px solid #000;
+  }
+}
+
+.form {
+  width: 500px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  position: relative;
+  color: #fff;
+  background-color: #000;
+  box-shadow: 0 5px 10px rgba(#000, 0.4);
+  overflow: hidden;
+  > h4,
+  div,
+  button {
+    position: relative;
+    z-index: 5;
+  }
+  &:before {
+    content: '';
+    display: block;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-image: url('https://images.unsplash.com/39/lIZrwvbeRuuzqOoWJUEn_Photoaday_CSD%20(1%20of%201)-5.jpg?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1050&q=80');
+    background-size: cover;
+    background-position: center;
+    filter: blur(2px) brightness(0.8);
+  }
+  h4 {
+    color: #fff;
+    margin-bottom: 1rem;
+  }
+  label {
+    font-size: 1.25rem;
+  }
+  button {
+    font-size: 1.25rem;
+    margin-top: 1rem;
+    color: #fff;
+    background-color: #ff9605;
+    &:hover {
+      background-color: adjust-color($color: #ff9605, $lightness: 5%);
+    }
+    &:focus {
+      box-shadow: none;
+    }
+  }
+  .form-control:focus {
+    border-color: #ff9605;
+    box-shadow: none;
+  }
+}
+table {
+  border: 1px solid #ccc;
+}
+.listsBoard {
+  min-width: 1000px;
+  &-top {
+    margin-bottom: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    p {
+      font-size: 1.25rem;
+      color: #333;
+    }
+    .listsCount {
+      padding: 0 5px;
+      font-weight: 600;
+      font-size: 1.1em;
+    }
+    .btnClearAll {
+      border: 1px solid #333;
+      color: #333;
+      transition: background-color 0.3s;
+      &:hover {
+        background-color: #ccc;
+      }
+    }
+  }
+
+  td {
+    vertical-align: middle;
+  }
+  .form-check {
+    .btn {
+      position: relative;
+      top: 0;
+      left: 0;
+      width: 40px;
+      height: 20px;
+      border-radius: 16px;
+      background-color: #666;
+      vertical-align: top;
+      &-ball {
+        position: absolute;
+        top: 2px;
+        left: 2px;
+        border-radius: 50%;
+        width: 14px;
+        height: 14px;
+        background-color: #fff;
+        transition: 0.3s;
+      }
+    }
+    input[type='checkbox']:checked + .btn {
+      background-color: #ff9605;
+    }
+    input[type='checkbox']:checked + .btn .btn-ball {
+      transform: translateX(20px);
+    }
+    input {
+      position: absolute;
+      opacity: 0;
+    }
+    .checkText {
+      position: relative;
+      bottom: 2px;
+      left: 5px;
+    }
+  }
+}
