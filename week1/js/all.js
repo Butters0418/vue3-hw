@@ -97,8 +97,13 @@
   // button clear all
   btnClearAll.addEventListener('click', (e) => {
     e.preventDefault();
+    if (data.length == 0) {
+      alert('目前無產品哦');
+      return;
+    }
     data = [];
     renderData();
+    alert('刪除產品成功!');
   });
 
   // table click events
