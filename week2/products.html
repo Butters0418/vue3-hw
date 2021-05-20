@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vue hw week2 products</title>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css' integrity='sha512-rO2SXEKBSICa/AfyhEK5ZqWFCOok1rcgPYfGOqtX35OyiraBg6Xa4NnBJwXgpIRoXeWjcAmcQniMhp22htDc6g==' crossorigin='anonymous' />
+  <link rel="stylesheet" href="css/products.css">
+</head>
+
+<body>
+  <div class="main">
+    <!-- table -->
+    <div class="listsBoard">
+      <div class="listsBoard-top">
+        <p>目前有<span class="listsCount">0</span>項產品</p>
+      </div>
+      <table class="table table-striped text-left">
+        <thead>
+          <tr>
+            <th scope="col">產品名稱</th>
+            <th scope="col">原價</th>
+            <th scope="col">售價</th>
+            <th scope="col" style="width:20%">是否啟用</th>
+            <th scope="col">刪除</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- <tr>
+            <th scope="row">1</th>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>
+              <div class="form-group form-check pl-0 mb-0">
+                <label class="form-check-label" for="checkActive">
+                  <input type="checkbox" class="form-check-input" id="checkActive">
+                  <div class="btn">
+                    <div class="btn-ball"></div>
+                  </div>
+                  <span class="checkText">啟用</span>
+                </label>
+              </div>
+            </td>
+            <td><button type="button" class="btn btn-danger rounded-0">刪除</button></td>
+          </tr> -->
+          <tr>
+            <td colspan="5">目前沒有產品</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!-- END table -->
+  </div>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/axios/0.9.1/axios.min.js' integrity='sha512-Xk3wWei2TGrsh9kDSBKUMIjw/86sLUvhtnv9f7fOuIwhhiUTKz8szkWkzHthrM5Bb3Bu9idSzkxOrkzhcneuiw==' crossorigin='anonymous'></script>
+  <script src="js/products.js"></script>
+</body>
+
+</html>
