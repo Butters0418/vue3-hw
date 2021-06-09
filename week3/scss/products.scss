@@ -1,0 +1,95 @@
+@import 'init';
+
+.pc {
+  @include media($pad) {
+    display: none;
+  }
+}
+.mb {
+  display: none;
+  @include media($pad) {
+    display: block;
+  }
+}
+body {
+  width: 100%;
+  height: 100%;
+}
+.main {
+  display: flex;
+  justify-content: center;
+  padding-top: 10%;
+  height: 100%;
+  background-color: #fff;
+}
+table {
+  border: 1px solid #ccc;
+  background-color: #fff;
+}
+.listsBoard {
+  min-width: 1000px;
+  &-top {
+    margin-bottom: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    p {
+      font-size: 1.25rem;
+      color: #333;
+    }
+    .listsCount {
+      padding: 0 5px;
+      font-weight: 600;
+      font-size: 1.1em;
+    }
+    .btnClearAll {
+      border: 1px solid #333;
+      color: #333;
+      transition: background-color 0.3s;
+      &:hover {
+        background-color: #ccc;
+      }
+    }
+  }
+
+  td {
+    vertical-align: middle;
+  }
+  .form-check {
+    .btn {
+      position: relative;
+      top: 0;
+      left: 0;
+      width: 40px;
+      height: 20px;
+      border-radius: 16px;
+      background-color: #666;
+      vertical-align: top;
+      &-ball {
+        position: absolute;
+        top: 2px;
+        left: 2px;
+        border-radius: 50%;
+        width: 14px;
+        height: 14px;
+        background-color: #fff;
+        transition: 0.3s;
+      }
+    }
+    input[type='checkbox']:checked + .btn {
+      background-color: #ff9605;
+    }
+    input[type='checkbox']:checked + .btn .btn-ball {
+      transform: translateX(20px);
+    }
+    input {
+      position: absolute;
+      opacity: 0;
+    }
+    .checkText {
+      position: relative;
+      bottom: 2px;
+      left: 5px;
+    }
+  }
+}
