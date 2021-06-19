@@ -1,0 +1,52 @@
+@import url("https://fonts.googleapis.com/earlyaccess/notosanstc.css");
+body,
+div,
+span,
+h1,
+p,
+a,
+img,
+dl,
+dt,
+dd {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: none !important;
+  background: transparent;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  padding-right: 0 !important;
+  -webkit-overflow-scrolling: touch;
+  font-family: 'Noto Sans TC', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Microsoft JhengHei', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+.modal-open {
+  overflow: initial !important;
+}
+
+img {
+  max-width: 100%;
+}
+
+@media screen and (max-width: 767.98px) {
+  .pc {
+    display: none;
+  }
+}
+
+.mb {
+  display: none;
+}
+
+@media screen and (max-width: 767.98px) {
+  .mb {
+    display: block;
+  }
+}
+/*# sourceMappingURL=loging.css.map */
